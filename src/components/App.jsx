@@ -12,14 +12,14 @@ const App = () => {
   return (
      <Routes>
          <Route path='/' element={<Home />} />
-         <Route path='/' element={<Movies />} />
-         <Route path='/' element={<MoviesDetails />} />
-         <Route path='/' element={<Cast />} />
-         <Route path='/' element={<Reviews />} />
+         <Route path='/movies' element={<Movies />} />
+         <Route path='/movies/:movieId' element={<MoviesDetails />} />
+         <Route path='/:movieId/cast' element={<Cast />} />
+         <Route path='/:movieId/reviews' element={<Reviews />} />
     </Routes>
     
   )
     
 };
 
-export default App
+export default App;

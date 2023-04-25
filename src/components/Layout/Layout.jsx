@@ -1,16 +1,20 @@
 import React from 'react'
-import Header from 'components/Header/header'
+import { NavLink } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 import css from 'components/Layout/Layout.module.css'
 
 const Layout = () => {
     return (
         <div>
-
             <header className={css.header}>
-                
-                  <Header />
-            <Outlet />
+                <nav className={css.nav}>
+                    <NavLink className={css.link} to='/'>
+                        Home
+                    </NavLink>
+                    <NavLink className={css.link} to='/movies'>
+                        Movies
+                    </NavLink>
+                </nav>
             </header> 
           
         

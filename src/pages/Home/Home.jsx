@@ -1,7 +1,7 @@
 import { getMovies } from 'components/API';
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import css from './Home.module.css';
+import css from './Home.module.css'
 
 const Home = () => {
   const [films, setFilms] = useState([]);

@@ -5,8 +5,6 @@ import { useState, useEffect } from "react";
 import css from './Movies.module.css';
 
 
-
-
 const Movies = () => {
 
      const [searchParams, setSearchParams] = useSearchParams();

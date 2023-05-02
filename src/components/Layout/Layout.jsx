@@ -5,7 +5,7 @@ import css from './Layout.module.css';
 
 const LayoutLink = styled(NavLink)`
   &.active {
-     color: pink;
+     color: goldenrod;
   }
 `;
 

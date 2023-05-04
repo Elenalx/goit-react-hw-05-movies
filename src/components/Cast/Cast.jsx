@@ -15,7 +15,8 @@ const Cast = () => {
 
   return (
     <>
-      {cast.map(actor => (
+      {cast.length !== 0 ? (
+        cast.map(actor => (
         <div key={actor.id} className={css.actorInfo}>
           <img
             src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`}
@@ -25,7 +26,10 @@ const Cast = () => {
           <p className={css.actorName}>{actor.name}</p>
           <p className={css.actorCharacter}>Character: {actor.character}</p>
         </div>
-      ))}
+        ))
+      ) : (
+        <p>Sorry, we can't find any cast</p>
+      )}
     </>
   );
 };

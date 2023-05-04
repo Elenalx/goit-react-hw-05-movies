@@ -9,15 +9,17 @@ const MovieDetails = () => {
 
   const { movieId } = useParams();
   const location = useLocation();
+  const[oldRouter] = useState(location.state?.from )
 
   useEffect(() => {
     getInfoMovie(movieId)
       .then(response => response.json())
       .then(film => setFilm(film));
-  }, [movieId]);
+  }, [movieId, location]);
+
   return (
     <>
-      <Link to={location.state?.from ?? '/'} className={css.link}>
+      <Link to={oldRouter ?? '/'} className={css.link}>
         Go back
       </Link>
       <div className={css.container}>
